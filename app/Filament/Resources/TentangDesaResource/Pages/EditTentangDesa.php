@@ -8,6 +8,8 @@ use Filament\Resources\Pages\EditRecord;
 use Filament\Forms;
 use Filament\Forms\Form;
 use App\Models\MisiDesa;
+use Filament\Notifications\Notification;
+
 class EditTentangDesa extends EditRecord
 {
     protected static string $resource = TentangDesaResource::class;
@@ -16,6 +18,16 @@ class EditTentangDesa extends EditRecord
     {
         return static::getResource()::getUrl('index');
     }
+
+    protected function getSavedNotification(): ?Notification
+    {
+        return Notification::make()
+            ->title('Berhasil diubah')
+            ->body('Tentang Desa berhasil diubah & sudah tersimpan di database.')
+            ->success()
+            ->send();
+    }
+
     public function form(Form $form): Form
     {
         return $form
