@@ -11,10 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('misi_desa', function (Blueprint $table) {
+        Schema::create('sotk_positions', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('id_tentang_desa')->constrained('tentang_desa')->cascadeOnDelete();
-            $table->text('misi');
+            $table->text('name');
+            $table->text('description')->nullable();
+            $table->boolean('status')->default(1);
             $table->timestamps();
         });
     }
@@ -24,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('misi_desa');
+        Schema::dropIfExists('sotk_positions');
     }
 };

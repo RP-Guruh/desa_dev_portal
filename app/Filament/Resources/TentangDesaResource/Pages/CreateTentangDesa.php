@@ -7,7 +7,7 @@ use Filament\Actions;
 use Filament\Resources\Pages\CreateRecord;
 use Filament\Forms;
 use Filament\Forms\Form;
-use App\Models\MisiDesa;
+use Filament\Forms\Components\Textarea;
 
 class CreateTentangDesa extends CreateRecord
 {
@@ -64,7 +64,7 @@ class CreateTentangDesa extends CreateRecord
                 Forms\Components\Section::make('Visi & Misi')
                     ->description('Visi dan misi yang menjadi tujuan dan langkah-langkah dalam membangun desa')
                     ->schema([
-                        Forms\Components\TextArea::make('visi')
+                        TextArea::make('visi')
                             ->label('Visi Desa')
                             ->placeholder('Ketik Visi Desa disini')
                             ->rows(3)
