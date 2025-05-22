@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('batas_timur');
             $table->string('batas_selatan');
             $table->string('batas_barat');
-            $table->decimal('luas_wilayah', 10, 2);
+            $table->decimal('luas_wilayah', 10, 0);
             $table->timestamps();
         });
     }
