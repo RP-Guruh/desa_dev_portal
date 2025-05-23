@@ -17,7 +17,7 @@ return new class extends Migration
             $table->decimal('jumlah_kk', 10, 0)->nullable();
             $table->decimal('jumlah_lakilaki', 10, 0)->nullable();
             $table->decimal('jumlah_perempuan', 10, 0)->nullable();
-            $table->date('bulan_tahun')->nullable();
+            $table->year('tahun')->nullable();
             $table->timestamps();
         });
     }

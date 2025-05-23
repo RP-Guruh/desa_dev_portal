@@ -45,7 +45,7 @@ class CreateStatistikTotalPenduduk extends CreateRecord
                     ->numeric()
                     ->placeholder('Masukkan Jumlah Penduduk Laki-Laki')
                     ->suffix('Jiwa')
-                    ->live(onBlur: false)
+                    ->live(debounce: 500)
                     ->afterStateUpdated(function ($state, Set $set, $get) {
                         $lakiLaki = (int) $state ?: 0;
                         $perempuan = (int) $get('jumlah_perempuan') ?: 0;
@@ -57,7 +57,7 @@ class CreateStatistikTotalPenduduk extends CreateRecord
                     ->numeric()
                     ->placeholder('Masukkan Jumlah Penduduk Perempuan')
                     ->suffix('Jiwa')
-                    ->live(onBlur: false)
+                    ->live(debounce: 500)
                     ->afterStateUpdated(function ($state, Set $set, $get) {
                         $perempuan = (int) $state ?: 0;
                         $lakiLaki = (int) $get('jumlah_lakilaki') ?: 0;
@@ -77,7 +77,15 @@ class CreateStatistikTotalPenduduk extends CreateRecord
                     ->helperText('Jumlah Penduduk = Jumlah Laki-Laki + Jumlah Perempuan | Jika tidak sesuai dapat diubah')
                     ->placeholder('Masukkan Jumlah Penduduk')
                     ->suffix('Jiwa'),
-               
+                
+                Forms\Components\Select::make('tahun')
+                    ->label('Tahun')
+                    ->options(
+                        collect(range(date('Y'), 1900))->mapWithKeys(fn ($year) => [$year => $year])->toArray()
+                    )
+                    ->searchable()
+                    ->required()
+                    
             ]);
     }
 }

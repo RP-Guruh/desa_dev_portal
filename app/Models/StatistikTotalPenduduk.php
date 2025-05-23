@@ -13,6 +13,7 @@ class StatistikTotalPenduduk extends Model
         'jumlah_perempuan',
         'jumlah_kk',
         'jumlah_penduduk',
+        'tahun'
     ];
 
 }

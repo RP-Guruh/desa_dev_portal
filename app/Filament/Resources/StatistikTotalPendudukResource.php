@@ -31,11 +31,30 @@ class StatistikTotalPendudukResource extends Resource
             ]);
     }
 
+    
+    protected function getTableQuery(): Builder
+    {
+        return StatistikTotalPenduduk::query(); 
+    }
+
+
+
     public static function table(Table $table): Table
     {
         return $table
             ->columns([
-                //
+                Tables\Columns\TextColumn::make('total_penduduk')
+                    ->label('Total Penduduk')
+                    ->sortable()
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('laki_laki')
+                    ->label('Laki-Laki')
+                    ->sortable()
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('perempuan')
+                    ->label('Perempuan')
+                    ->sortable()
+                    ->searchable(),
             ])
             ->filters([
                 //

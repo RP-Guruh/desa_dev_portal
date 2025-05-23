@@ -9,7 +9,7 @@ class TotalPendudukOverview extends BaseWidget
 {
     protected function getStats(): array
     {
-        $totalPenduduk = StatistikTotalPenduduk::first();
+        $totalPenduduk = StatistikTotalPenduduk::orderBy('tahun', 'desc')->first();
         return [
             Stat::make('Jumlah Penduduk', $totalPenduduk?->jumlah_penduduk)
                 ->description('Jiwa')
