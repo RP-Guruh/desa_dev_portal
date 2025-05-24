@@ -28,7 +28,8 @@ class IndexTotalPenduduk extends Page implements HasTable
     {   
             return [
                 Action::make('create')
-                    ->label('Buat Data')
+                    ->label('Tambah Data')
+                    ->icon('heroicon-o-plus')
                     ->url(\App\Filament\Resources\StatistikTotalPendudukResource::getUrl('create'))
                     ->color('primary'),
             ];
