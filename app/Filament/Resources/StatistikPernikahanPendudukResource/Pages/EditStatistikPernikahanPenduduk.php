@@ -1,40 +1,37 @@
 <?php
 
-namespace App\Filament\Resources\StatistikPendidikanPendudukResource\Pages;
+namespace App\Filament\Resources\StatistikPernikahanPendudukResource\Pages;
 
-use App\Filament\Resources\StatistikPendidikanPendudukResource;
-use Filament\Resources\Pages\CreateRecord;
-use App\Enums\PendidikanEnum;
+use App\Filament\Resources\StatistikPernikahanPendudukResource;
+use Filament\Resources\Pages\EditRecord;
+use App\Enums\PernikahanEnum;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Notifications\Notification;
 use Illuminate\Validation\ValidationException;
 use Illuminate\Support\Facades\DB;
 
-class CreateStatistikPendidikanPenduduk extends CreateRecord
+class EditStatistikPernikahanPenduduk extends EditRecord
 {
-    protected static string $resource = StatistikPendidikanPendudukResource::class;
+    protected static string $resource = StatistikPernikahanPendudukResource::class;
 
-    protected static ?string $title = 'Buat Data Statistik Usia Penduduk';
-
-
-    protected function mutateFormDataBeforeCreate(array $data): array
+    protected function mutateFormDataBeforeSave(array $data): array
     {
-        $existingRecord = DB::table('statistik_pendidikan_penduduks')
+        $existingRecord = DB::table('statistik_pernikahan_penduduks')
             ->where('tahun', $data['tahun'])
-            ->where('tingkat_pendidikan', $data['tingkat_pendidikan'])
+            ->where('status', $data['status'])
             ->exists();
 
         if ($existingRecord) {
             
             Notification::make()
                 ->title('Data Sudah Ada')
-                ->body('Data Statistik Pendidikan Penduduk untuk tahun ' . $data['tahun'] . ' dan tingkat pendidikan ' . $data['tingkat_pendidikan'] . ' sudah ada.')
+                ->body('Data Statistik Status Pernikahan '. $data['status'].' untuk tahun ' . $data['tahun'] . ' sudah ada.')
                 ->danger()
                 ->send();
                 throw ValidationException::withMessages([
-                    'tingkat_pendidikan' => 'Kombinasi tingkat pendidikan dan tahun sudah ada.',
-                    'tahun' => 'Kombinasi tingkat pendidikan dan tahun sudah ada.',
+                    'status' => 'Kombinasi status pernikahan dan tahun sudah ada.',
+                    'tahun' => 'Kombinasi status pernikahan dan tahun sudah ada.',
                 ]);
         }
         return $data;
@@ -49,12 +46,12 @@ class CreateStatistikPendidikanPenduduk extends CreateRecord
     {
         return $form
             ->schema([
-                Forms\Components\Select::make('tingkat_pendidikan')
-                    ->label('Tingkat Pendidikan')
+                Forms\Components\Select::make('status')
+                    ->label('Status Pernikahan Penduduk')
                     ->required()
                     ->searchable()
-                    ->placeholder('Pilih Tingkat Pendidikan Penduduk')
-                    ->options(PendidikanEnum::options()),
+                    ->placeholder('Pilih Agama / Kepercayaan Penduduk')
+                    ->options(PernikahanEnum::options()),
 
                 Forms\Components\TextInput::make('jumlah')
                     ->label('Jumlah Penduduk')
