@@ -3,15 +3,41 @@
 namespace App\Filament\Resources\StatistikUsiaPendudukResource\Pages;
 
 use App\Filament\Resources\StatistikUsiaPendudukResource;
-use Filament\Actions;
 use Filament\Resources\Pages\CreateRecord;
 use Filament\Forms;
 use Filament\Forms\Form;
+use Filament\Notifications\Notification;
+use Illuminate\Validation\ValidationException;
+use Illuminate\Support\Facades\DB;
 
 class CreateStatistikUsiaPenduduk extends CreateRecord
 {
     protected static string $resource = StatistikUsiaPendudukResource::class;
     protected static ?string $title = 'Buat Data Statistik Usia Penduduk';
+
+    protected function mutateFormDataBeforeCreate(array $data): array
+    {
+        $existingRecord = DB::table('statistik_usia_penduduks')
+            ->where('tahun', $data['tahun'])
+            ->where('usia_min', $data['usia_min'])
+            ->where('usia_max', $data['usia_max'])
+            ->where('jenis_kelamin', $data['jenis_kelamin'])
+            ->exists();
+
+        if ($existingRecord) {
+            
+            Notification::make()
+                ->title('Data Sudah Ada')
+                ->body('Data Statistik Usia Penduduk untuk rentang ' . $data['usia_min'] . ' sampai dengan ' . $data['usia_max'] . ' tahun '. $data['tahun'].' dan jenis kelamin '. ($data['jenis_kelamin'] == 'L' ? 'Laki-Laki' : 'Perempuan') .' sudah ada.')
+                ->danger()
+                ->send();
+                throw ValidationException::withMessages([
+                    'tingkat_pendidikan' => 'Kombinasi tingkat pendidikan dan tahun sudah ada.',
+                    'tahun' => 'Kombinasi tingkat pendidikan dan tahun sudah ada.',
+                ]);
+        }
+        return $data;
+    }
 
     protected function getRedirectUrl(): string
     {

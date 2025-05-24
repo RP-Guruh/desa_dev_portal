@@ -20,13 +20,6 @@ enum PendidikanEnum: string
         return array_column(self::cases(), 'value', 'name');
     }
 
-    public static function selectOptions(): array
-    {
-        return array_map(fn ($case) => [
-            'label' => $case->value,
-            'value' => $case->value,
-        ], self::cases());
-    }
 
     public function label(): string
     {
