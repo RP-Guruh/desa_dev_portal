@@ -3,15 +3,12 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\BeritaDesaResource\Pages;
-use App\Filament\Resources\BeritaDesaResource\RelationManagers;
 use App\Models\BeritaDesa;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Filament\Support\Enums\ActionSize;
 use Illuminate\Support\Carbon;
 
