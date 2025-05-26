@@ -53,7 +53,7 @@ class CreateStatistikPernikahanPenduduk extends CreateRecord
                     ->label('Status Pernikahan Penduduk')
                     ->required()
                     ->searchable()
-                    ->placeholder('Pilih Agama / Kepercayaan Penduduk')
+                    ->placeholder('Pilih Status Pernikahan Penduduk')
                     ->options(PernikahanEnum::options()),
 
                 Forms\Components\TextInput::make('jumlah')
