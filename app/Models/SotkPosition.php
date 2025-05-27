@@ -14,8 +14,4 @@ class SotkPosition extends Model
         'status'
     ];
 
-    // public function sotk()
-    // {
-    //     return $this->hasMany(Sotk::class);
-    // }
 }
