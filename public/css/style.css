@@ -1,3 +1,138 @@
+.mobile-bottom-nav {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background-color: #1a7a45;
+    border-radius: 15px;
+    padding: 8px 0;
+    z-index: 1030;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    border: none;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  /* Show when ready */
+  .mobile-bottom-nav.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .mobile-bottom-nav-wrapper {
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 0 10px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .mobile-bottom-nav-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .mobile-bottom-nav .nav-item {
+    flex: 0 0 auto;
+    width: 70px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    padding: 0 5px;
+    user-select: none;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .mobile-bottom-nav .nav-item i {
+    font-size: 18px;
+    display: block;
+  }
+  
+  .mobile-bottom-nav .nav-item span {
+    display: block;
+    margin-top: 2px;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .mobile-bottom-nav .nav-item:hover {
+    color: #fff176;
+    transform: scale(1.05);
+  }
+  
+  .mobile-bottom-nav .nav-item.active {
+    color: #fff176;
+  }
+  
+  .mobile-bottom-nav .nav-item.active span::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 6px;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 3px;
+    background: linear-gradient(90deg, #fff176, #fbc02d);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+    z-index: 1;
+  }
+  
+  .mobile-bottom-nav .nav-item:hover span::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 6px;
+    transform: translateX(-50%);
+    width: 40%;
+    height: 2px;
+    background: linear-gradient(90deg, #fff176, #fbc02d);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+    z-index: 1;
+  }
+  
+  /* Special center button */
+  .mobile-bottom-nav .nav-item.special {
+    background-color: #ffffff;
+    color: #1a7a45;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-top: -25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    position: relative;
+    z-index: 2;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .mobile-bottom-nav .nav-item.special:hover {
+    background-color: #fff176;
+    color: #1a7a45;
+    transform: scale(1.1);
+  }
+
+
+  /* Optional: Sembunyikan menu utama di mobile */
+  @media (max-width: 991.98px) {
+    .navbar-collapse {
+      display: none !important;
+    }
+  }
+
 
 /*** Spinner Start ***/
 /*** Spinner ***/

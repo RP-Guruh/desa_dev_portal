@@ -13,28 +13,42 @@
                     <!-- <img src="img/logo.png" alt="Logo"> -->
                 </a>
                 <button class="navbar-toggler" type="button" id="menu-toggle">
-      <span class="fa fa-bars text-white"></span>
-    </button>
+                    <span class="fa fa-bars text-white"></span>
+                </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
-      <div class="navbar-nav ms-auto py-0">
-        <a href="/" class="nav-item nav-link active text-white">Home</a>
-        <a href="#" class="nav-link text-white">Profil Desa</a>
-        <a href="#" class="nav-item nav-link text-white">PPID</a>
-        <div class="nav-item dropdown">
-          <a href="#" class="nav-link text-white" data-bs-toggle="dropdown">
-            <span class="dropdown-toggle">Infografis</span>
-          </a>
-          <div class="dropdown-menu m-0">
-            <a href="#" class="dropdown-item text-dark">Penduduk</a>
-            <a href="#" class="dropdown-item text-dark">SDGs</a>
-          </div>
-        </div>
-        <a href="#" class="nav-item nav-link text-white">Peta Desa</a>
-        <a href="#" class="nav-item nav-link text-white">Berita</a>
-        <a href="#" class="nav-item nav-link text-white">Produk Desa</a>
-        <a href="#" class="nav-item nav-link text-white">Wisata Desa</a>
-      </div>
-    </div>
+                    <div class="navbar-nav ms-auto py-0">
+                        <a href="/" class="nav-item nav-link active text-white">Home</a>
+                        <a href="#" class="nav-link text-white">Profil Desa</a>
+                        <a href="#" class="nav-item nav-link text-white">PPID</a>
+                        <div class="nav-item dropdown">
+                        <a href="#" class="nav-link text-white" data-bs-toggle="dropdown">
+                            <span class="dropdown-toggle">Infografis</span>
+                        </a>
+                        <div class="dropdown-menu m-0">
+                            <a href="#" class="dropdown-item text-dark">Penduduk</a>
+                            <a href="#" class="dropdown-item text-dark">SDGs</a>
+                        </div>
+                        </div>
+                        <a href="#" class="nav-item nav-link text-white">Peta Desa</a>
+                        <a href="#" class="nav-item nav-link text-white">Berita Desa</a>
+                        <a href="#" class="nav-item nav-link text-white">Produk Desa</a>
+                        <a href="#" class="nav-item nav-link text-white">Wisata Desa</a>
+                    </div>
+                </div>
+
+                <!-- KHUSUS MOBILE -->
+                <nav class="mobile-bottom-nav d-none">
+                    <div class="mobile-bottom-nav-wrapper">
+                        <a href="/" class="nav-item active"><i class="fas fa-home"></i><span>Home</span></a>
+                        <a href="#" class="nav-item"><i class="fas fa-user"></i><span>Profil</span></a>
+                        <a href="#" class="nav-item"><i class="fas fa-chart-bar"></i><span>PPID</span></a>
+                        <a href="#" class="nav-item"><i class="fas fa-map"></i><span>Peta</span></a>
+                        <a href="#" class="nav-item"><i class="fas fa-newspaper"></i><span>Berita</span></a>
+                        <a href="#" class="nav-item"><i class="fas fa-thumbs-up"></i><span>Produk</span></a>
+                        <a href="#" class="nav-item"><i class="fas fa-image"></i><span>Wisata</span></a>
+                    </div>
+                </nav>
             </nav>
+            
         </div>
         <!-- Navbar & Hero End -->

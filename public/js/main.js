@@ -31,27 +31,30 @@
         time: 2000
     });
 
+    function toggleNavByWidth() {
+        const $nav = $('.mobile-bottom-nav');
+      
+        if ($(window).width() < 992) {
+          $nav.removeClass('d-none');
+          setTimeout(() => $nav.addClass('show'), 50); // allow CSS transition
+          $('#menu-toggle, #navbarCollapse').addClass('d-none');
+        } else {
+          $nav.removeClass('show');
+          setTimeout(() => $nav.addClass('d-none'), 400); // delay to allow transition
+          $('#menu-toggle, #navbarCollapse').removeClass('d-none');
+        }
+      }
+      
 
     // Modal Video
     $(document).ready(function () {
 
-        const $toggle = $('#menu-toggle');
-        const $icon = $toggle.find('span');
-        const $menu = $('#navbarCollapse');
-    
-        $toggle.on('click', function () {
-          if ($menu.hasClass('show')) {
-            // Menu sedang terbuka, tutup dengan animasi
-            $menu.slideUp(300, function () {
-              $menu.removeClass('show').removeAttr('style'); // Hapus inline style dari slideUp
-              $icon.removeClass('fa-times').addClass('fa-bars');
-            });
-          } else {
-            // Menu tertutup, buka dengan animasi
-            $menu.addClass('show').hide().slideDown(300);
-            $icon.removeClass('fa-bars').addClass('fa-times');
-          }
+        toggleNavByWidth(); // saat halaman pertama kali dimuat
+
+        $(window).resize(function () {
+          toggleNavByWidth(); // saat ukuran layar berubah
         });
+
 
         var $videoSrc;
         $('.btn-play').click(function () {
