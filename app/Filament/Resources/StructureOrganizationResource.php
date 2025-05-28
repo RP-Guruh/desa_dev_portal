@@ -70,10 +70,8 @@ class StructureOrganizationResource extends Resource
                     ->placeholder('Upload foto disini')
                     ->columnSpanFull()
                     ->disk('public')
-                    ->directory('structure-organization')
-                    ->preserveFilenames(false)
+                    ->directory('photo-sotk')
                     ->maxSize(1024)
-                    ->fetchFileInformation(false)
                
             ]);
     }
@@ -115,7 +113,9 @@ class StructureOrganizationResource extends Resource
             ->actions([
                 Tables\Actions\EditAction::make()
                 ->label('Edit')
-                ->action(function (StructureOrganization $record) {
+                ->action(function (StructureOrganization $record, array $data) {
+                    $record->update($data);
+
                     return Notification::make()
                         ->title('Berhasil diubah')
                         ->body('Data berhasil diubah & sudah tersimpan di database.')

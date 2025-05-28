@@ -480,7 +480,7 @@
 
 /*** Single Page Hero Header Start ***/
 .bg-breadcrumb {
-    background: linear-gradient(rgba(0, 58, 102, 0.9), rgba(0, 58, 102, 0.8)), url(../img/breadcrumb.png);
+    background: linear-gradient(rgba(0, 58, 102, 0.9), rgba(0, 58, 102, 0.8)), url(../img/stats_banner.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: initial;
@@ -583,7 +583,7 @@
 
 /*** Counter Facts Start ***/
 .counter-facts {
-    background: linear-gradient(rgba(255, 255, 255, .9), rgba(255, 255, 255, 0.8)), url(../img/breadcrumb.png);
+    background: linear-gradient(rgba(255, 255, 255, .9), rgba(255, 255, 255, 0.8)), url(../img/stats_banner.jpg);
     background-size: cover;
     background-attachment: fixed;
     background-position: center center;
@@ -610,7 +610,7 @@
     left: 0;
     top: 0;
     border-radius: 10px 10px 0 0;
-    background-color: var(--bs-primary);
+    background-color: red;
     
 }
 .counter-facts .counter .counter-icon {
@@ -622,8 +622,8 @@
     transform: translateY(-20px);
     font-size: 50px;
     line-height: 90px;
-    color: var(--bs-secondary);
-    background: rgba(1, 143, 252, 0.5);
+    color: red;
+    background: red;
     clip-path: polygon(0% 0%, 100% 0, 100% 70%, 50% 100%, 0 70%);
 }
 .counter-facts .counter .counter-icon:before {
@@ -635,7 +635,7 @@
     left: 50%;
     transform: translateX(-50%);
     border-radius: 10px 10px 0 0;
-    background: rgba(0, 58, 102, 0.5);
+    background: #ffffff;
     z-index: -1;
     clip-path: polygon(0% 0%, 100% 0, 100% 70%, 50% 100%, 0 70%);
 }

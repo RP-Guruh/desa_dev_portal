@@ -44,7 +44,7 @@ class EditTentangDesa extends EditRecord
                 Forms\Components\Section::make('Visi & Misi')
                     ->description('Visi dan misi yang menjadi tujuan dan langkah-langkah dalam membangun desa')
                     ->schema([
-                        Forms\Components\TextArea::make('visi')
+                        Forms\Components\Textarea::make('visi')
                             ->label('Visi Desa')
                             ->placeholder('Ketik Visi Desa disini')
                             ->rows(3)
