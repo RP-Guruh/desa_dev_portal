@@ -133,6 +133,44 @@
     }
   }
 
+  .floating-btn {
+    position: fixed;
+    top: 50px;
+    right: 20px;
+    width: 48px;
+    height: 48px;
+    background: #1a7a45; /* hijau */
+    color: white; /* warna icon */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25),
+                0 0 10px rgba(26, 122, 69, 0.6);
+    z-index: 999;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid #fff;
+    padding: 0;
+    cursor: pointer;
+}
+
+.floating-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35),
+                0 0 14px rgba(26, 122, 69, 0.8);
+    color: white; /* pastikan icon tetap putih saat hover */
+}
+
+
+
+/* Versi desktop: agak turun */
+@media (min-width: 992px) {
+    .floating-btn {
+        top: 100px;
+    }
+}
+
 
 /*** Spinner Start ***/
 /*** Spinner ***/

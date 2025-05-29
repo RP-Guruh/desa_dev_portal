@@ -12,6 +12,9 @@
                 </h1>
                     <!-- <img src="img/logo.png" alt="Logo"> -->
                 </a>
+                <a href="#!" class="floating-btn" title="Alarm">
+                    <i class="fas fa-bell"></i>
+                </a>
                 <button class="navbar-toggler" type="button" id="menu-toggle">
                     <span class="fa fa-bars text-white"></span>
                 </button>

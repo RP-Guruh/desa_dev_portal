@@ -78,4 +78,6 @@
 @include('home.berita_terbaru')
 @include('home.umkm_desa')
 @include('home.galeri_desa')
+@include('partials.footer')
+
 @endsection
