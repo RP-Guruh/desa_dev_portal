@@ -34,7 +34,7 @@
                         </div>
                         <a href="#" class="nav-item nav-link text-white">Peta Desa</a>
                         <a href="{{ url('/berita') }}" class="nav-item nav-link {{ Request::is('berita') ? 'active text-white fw-bold' : 'text-white' }}">Berita Desa</a>
-                        <a href="#" class="nav-item nav-link text-white">Produk Desa</a>
+                        <a href="{{ url('/produk') }}" class="nav-item nav-link {{ Request::is('produk') ? 'active text-white fw-bold' : 'text-white' }}">Produk Desa</a>
                         <a href="#" class="nav-item nav-link text-white">Wisata Desa</a>
                     </div>
                 </div>
@@ -53,7 +53,7 @@
                         <a href="#" class="nav-item"><i class="fas fa-chart-bar"></i><span>PPID</span></a>
                         <a href="#" class="nav-item"><i class="fas fa-map"></i><span>Peta</span></a>
                         <a href="{{ url('/berita') }}" class="nav-item {{ Request::is('berita') ? 'active' : '' }}"><i class="fas fa-newspaper"></i><span>Berita</span></a>
-                        <a href="#" class="nav-item"><i class="fas fa-thumbs-up"></i><span>Produk</span></a>
+                        <a href="{{ url('/produk') }}" class="nav-item {{ Request::is('produk') ? 'active' : '' }}"><i class="fas fa-thumbs-up"></i><span>Produk</span></a>
                         <a href="#" class="nav-item"><i class="fas fa-image"></i><span>Wisata</span></a>
                     </div>
                 </nav>
