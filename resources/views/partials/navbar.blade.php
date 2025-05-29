@@ -22,7 +22,7 @@
                     <div class="navbar-nav ms-auto py-0">
                         <a href="/" class="nav-item nav-link {{ Request::is('/') ? 'active text-white fw-bold' : 'text-white' }}">Home</a>
                         <a href="{{ url('/profil') }}" class="nav-item nav-link {{ Request::is('profil') ? 'active text-white fw-bold' : 'text-white' }}">Profil Desa</a>
-                        <a href="#" class="nav-item nav-link text-white">PPID</a>
+                        <a href="" class="nav-item nav-link text-white">PPID</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link text-white" data-bs-toggle="dropdown">
                                 <span class="dropdown-toggle">Infografis</span>
@@ -33,7 +33,7 @@
                             </div>
                         </div>
                         <a href="#" class="nav-item nav-link text-white">Peta Desa</a>
-                        <a href="#" class="nav-item nav-link text-white">Berita Desa</a>
+                        <a href="{{ url('/berita') }}" class="nav-item nav-link {{ Request::is('berita') ? 'active text-white fw-bold' : 'text-white' }}">Berita Desa</a>
                         <a href="#" class="nav-item nav-link text-white">Produk Desa</a>
                         <a href="#" class="nav-item nav-link text-white">Wisata Desa</a>
                     </div>
@@ -52,7 +52,7 @@
 
                         <a href="#" class="nav-item"><i class="fas fa-chart-bar"></i><span>PPID</span></a>
                         <a href="#" class="nav-item"><i class="fas fa-map"></i><span>Peta</span></a>
-                        <a href="#" class="nav-item"><i class="fas fa-newspaper"></i><span>Berita</span></a>
+                        <a href="{{ url('/berita') }}" class="nav-item {{ Request::is('berita') ? 'active' : '' }}"><i class="fas fa-newspaper"></i><span>Berita</span></a>
                         <a href="#" class="nav-item"><i class="fas fa-thumbs-up"></i><span>Produk</span></a>
                         <a href="#" class="nav-item"><i class="fas fa-image"></i><span>Wisata</span></a>
                     </div>
