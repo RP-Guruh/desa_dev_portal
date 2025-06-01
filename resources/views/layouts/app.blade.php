@@ -22,7 +22,7 @@
         <link href="{{ asset('js/owlcarousel/assets/owl.carousel.min.css') }}?v={{ filemtime(public_path('js/owlcarousel/assets/owl.carousel.min.css')) }}" rel="stylesheet">
         <link href="{{ asset('css/bootstrap.min.css') }}?v={{ filemtime(public_path('css/bootstrap.min.css')) }}" rel="stylesheet">
         <link href="{{ asset('css/style.css') }}?v={{ filemtime(public_path('css/style.css')) }}" rel="stylesheet">
-
+        <link href="{{ asset('css/style_infografis.css') }}?v={{ filemtime(public_path('css/style_infografis.css')) }}" rel="stylesheet">
     </head>
 
     <body>
@@ -31,21 +31,39 @@
        
     </body>
 
+
+    <!-- jQuery dulu -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <!-- CanvasJS setelah jQuery -->
+    <script src="https://cdn.canvasjs.com/jquery.canvasjs.min.js"></script>
+
+    <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
 
+    <!-- Plugin lainnya -->
     <script src="{{ asset('js/wow/wow.min.js') }}?v={{ filemtime(public_path('js/wow/wow.min.js')) }}"></script>
     <script src="{{ asset('js/easing/easing.min.js') }}?v={{ filemtime(public_path('js/easing/easing.min.js')) }}"></script>
     <script src="{{ asset('js/waypoints/waypoints.min.js') }}?v={{ filemtime(public_path('js/waypoints/waypoints.min.js')) }}"></script>
     <script src="{{ asset('js/counterup/counterup.min.js') }}?v={{ filemtime(public_path('js/counterup/counterup.min.js')) }}"></script>
     <script src="{{ asset('js/owlcarousel/owl.carousel.min.js') }}?v={{ filemtime(public_path('js/owlcarousel/owl.carousel.min.js')) }}"></script>
 
-    <!-- Template Javascript -->
+    <!-- Script utama -->
     <script src="{{ asset('js/main.js') }}?v={{ filemtime(public_path('js/main.js')) }}"></script>
+    <script src="{{ asset('js/infografis.js') }}?v={{ filemtime(public_path('js/infografis.js')) }}"></script>
 
+
+    <script>
+        $(document).ready(function () {
+            $('#tahunSelect').on('change', function () {
+            const tahun = $(this).val();
+            $('.chart-placeholder').each(function () {
+                const label = $(this).parent().find('h2').text();
+                const grafikLabel = label.replace('Jumlah ', '').replace('Distribusi ', '');
+                $(this).text(`Grafik ${grafikLabel} (${tahun})`);
+            });
+            });
+        });
+    </script>
 
 </html>

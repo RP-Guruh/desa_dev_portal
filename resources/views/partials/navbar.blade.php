@@ -28,7 +28,7 @@
                                 <span class="dropdown-toggle">Infografis</span>
                             </a>
                             <div class="dropdown-menu m-0">
-                                <a href="#" class="dropdown-item text-dark">Penduduk</a>
+                                <a href="{{ url('infografis/penduduk') }}" class="dropdown-item text-dark {{ Request::is('infografis/penduduk') ? 'active text-white fw-bold' : 'text-white' }}">Penduduk</a>
                                 <a href="#" class="dropdown-item text-dark">SDGs</a>
                             </div>
                         </div>
@@ -49,7 +49,7 @@
                         <a href="{{ url('/profil') }}" class="nav-item {{ Request::is('profil') ? 'active' : '' }}">
                             <i class="fas fa-user"></i><span>Profil</span>
                         </a>
-
+                        <a href="{{ url('infografis/penduduk') }}" class="nav-item"><i class="fas fa-chart-bar"></i><span>Penduduk</span></a>
                         <a href="#" class="nav-item"><i class="fas fa-chart-bar"></i><span>PPID</span></a>
                         <a href="#" class="nav-item"><i class="fas fa-map"></i><span>Peta</span></a>
                         <a href="{{ url('/berita') }}" class="nav-item {{ Request::is('berita') ? 'active' : '' }}"><i class="fas fa-newspaper"></i><span>Berita</span></a>
