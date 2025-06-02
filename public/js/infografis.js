@@ -7,7 +7,7 @@ const charts = {
             theme: "dark2",
             exportEnabled: true,
           title: {
-            text: `Distribusi Jenis Kelamin Tahun ${tahun}`,
+            text: `Tahun ${tahun}`,
             fontFamily: "poppins",
             fontSize: 18,
             fontWeight: "bold"
@@ -60,7 +60,7 @@ const charts = {
             theme: "dark2",
             exportEnabled: true,
             title: {
-              text: `Distribusi Usia Tahun ${tahun}`,
+              text: `Tahun ${tahun}`,
               fontFamily: "poppins",
               fontSize: 18,
               fontWeight: "bold"
@@ -134,7 +134,215 @@ const charts = {
             'background': 'white',
           });
         }
+    },
+
+    pendidikan: {
+      containerChart: '#chartpendidikan',
+      render: function(data, tahun) {
+        
+        const options = {
+          animationEnabled: true,
+          theme: "dark2",
+          exportEnabled: true,
+          title: {
+            text: `Tahun ${tahun}`,
+            fontFamily: "poppins",
+            fontSize: 20,
+            fontWeight: "bold"
+          },
+          axisX: {
+            title: "Tingkat Pendidikan",
+            labelFontSize: 12,
+            labelFontFamily: "poppins",
+            labelFontWeight: "bold",
+            interval: 1,
+          },
+          axisY: {
+            title: "Jumlah Penduduk (Jiwa)",
+            includeZero: true,
+            labelFontWeight: "bold",
+            labelFontSize: 12,
+            labelFontFamily: "poppins",
+          },
+          data: [{
+            type: "column",
+            indexLabelFontSize: 12,
+            indexLabelFontFamily: "poppins",
+            indexLabelFontWeight: "bold",
+            indexLabel: "{y}",
+            indexLabelPlacement: "inside",
+            dataPoints: data.dataPoints 
+          }]
+        };
+    
+        $(this.containerChart).CanvasJSChart(options);
+        $(this.containerChart).css({
+          'color': '',
+          'font-style': '',
+          'display': 'block',
+          'height': '400px',
+          'border': 'none',
+          'background': 'white'
+        });
+      },
+      hasData: function(data) {
+        return data && Array.isArray(data.dataPoints) && data.dataPoints.some(dp => dp.y > 0);
+      },
+      showNoData: function(tahun) {
+        $(this.containerChart).html(`Data Tidak Tersedia Untuk Tahun ${tahun}`);
+        $(this.containerChart).css({
+          'color': '#aaa',
+          'font-style': 'italic',
+          'font-size': '1.2rem',
+          'display': 'flex',
+          'justify-content': 'center',
+          'align-items': 'center',
+          'height': '300px',
+          'border': '2px dashed #ccc',
+          'border-radius': '10px',
+          'background': 'white',
+        });
       }
+    },
+
+    agama: {
+      containerChart: '#chartagama',
+      render: function(data, tahun) {
+        
+        const options = {
+          animationEnabled: true,
+          theme: "dark2",
+          exportEnabled: true,
+          title: {
+            text: `Tahun ${tahun}`,
+            fontFamily: "poppins",
+            fontSize: 20,
+            fontWeight: "bold"
+          },
+          axisX: {
+            title: "Agama dan Kepercayaan",
+            labelFontSize: 12,
+            labelFontFamily: "poppins",
+            labelFontWeight: "bold",
+            interval: 1,
+          },
+          axisY: {
+            title: "Jumlah Penduduk (Jiwa)",
+            includeZero: true,
+            labelFontWeight: "bold",
+            labelFontSize: 12,
+            labelFontFamily: "poppins",
+          },
+          data: [{
+            type: "column",
+            indexLabelFontSize: 12,
+            indexLabelFontFamily: "poppins",
+            indexLabelFontWeight: "bold",
+            indexLabel: "{y}",
+            indexLabelPlacement: "inside",
+            dataPoints: data.dataPoints 
+          }]
+        };
+    
+        $(this.containerChart).CanvasJSChart(options);
+        $(this.containerChart).css({
+          'color': '',
+          'font-style': '',
+          'display': 'block',
+          'height': '400px',
+          'border': 'none',
+          'background': 'white'
+        });
+      },
+      hasData: function(data) {
+        return data && Array.isArray(data.dataPoints) && data.dataPoints.some(dp => dp.y > 0);
+      },
+      showNoData: function(tahun) {
+        $(this.containerChart).html(`Data Tidak Tersedia Untuk Tahun ${tahun}`);
+        $(this.containerChart).css({
+          'color': '#aaa',
+          'font-style': 'italic',
+          'font-size': '1.2rem',
+          'display': 'flex',
+          'justify-content': 'center',
+          'align-items': 'center',
+          'height': '300px',
+          'border': '2px dashed #ccc',
+          'border-radius': '10px',
+          'background': 'white',
+        });
+      }
+    },
+
+    perkawinan: {
+      containerChart: '#chartperkawinan',
+      render: function(data, tahun) {
+        
+        const options = {
+          animationEnabled: true,
+          theme: "dark2",
+          exportEnabled: true,
+          title: {
+            text: `Tahun ${tahun}`,
+            fontFamily: "poppins",
+            fontSize: 20,
+            fontWeight: "bold"
+          },
+          axisX: {
+            title: "Status Perkawinan",
+            labelFontSize: 12,
+            labelFontFamily: "poppins",
+            labelFontWeight: "bold",
+            interval: 1,
+          },
+          axisY: {
+            title: "Jumlah Penduduk (Jiwa)",
+            includeZero: true,
+            labelFontWeight: "bold",
+            labelFontSize: 12,
+            labelFontFamily: "poppins",
+          },
+          data: [{
+            type: "column",
+            indexLabelFontSize: 12,
+            indexLabelFontFamily: "poppins",
+            indexLabelFontWeight: "bold",
+            indexLabel: "{y}",
+            indexLabelPlacement: "inside",
+            dataPoints: data.dataPoints 
+          }]
+        };
+    
+        $(this.containerChart).CanvasJSChart(options);
+        $(this.containerChart).css({
+          'color': '',
+          'font-style': '',
+          'display': 'block',
+          'height': '400px',
+          'border': 'none',
+          'background': 'white'
+        });
+      },
+      hasData: function(data) {
+        return data && Array.isArray(data.dataPoints) && data.dataPoints.some(dp => dp.y > 0);
+      },
+      showNoData: function(tahun) {
+        $(this.containerChart).html(`Data Tidak Tersedia Untuk Tahun ${tahun}`);
+        $(this.containerChart).css({
+          'color': '#aaa',
+          'font-style': 'italic',
+          'font-size': '1.2rem',
+          'display': 'flex',
+          'justify-content': 'center',
+          'align-items': 'center',
+          'height': '300px',
+          'border': '2px dashed #ccc',
+          'border-radius': '10px',
+          'background': 'white',
+        });
+      }
+    }
+    
       
       
       

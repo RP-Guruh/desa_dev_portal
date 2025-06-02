@@ -29,7 +29,7 @@
                     <div class="counter-content">
                         <h3>Jumlah Penduduk</h3>
                         <div class="d-flex align-items-center justify-content-center">
-                            <span class="counter-value" data-toggle="counter-up">{{ $penduduk->jumlah_penduduk }}</span>
+                            <span class="counter-value" data-toggle="counter-up">{{ $penduduk->jumlah_penduduk ?? '0' }}</span>
                         </div>
                     </div>
                 </div>
@@ -42,7 +42,7 @@
                     <div class="counter-content">
                         <h3>Laki-laki</h3>
                         <div class="d-flex align-items-center justify-content-center">
-                            <span class="counter-value" data-toggle="counter-up">{{ $penduduk->jumlah_lakilaki }}</span>
+                            <span class="counter-value" data-toggle="counter-up">{{ $penduduk->jumlah_lakilaki ?? '0' }}</span>
                         </div>
                     </div>
                 </div>
@@ -55,7 +55,7 @@
                     <div class="counter-content">
                         <h3>Perempuan</h3>
                         <div class="d-flex align-items-center justify-content-center">
-                            <span class="counter-value" data-toggle="counter-up">{{ $penduduk->jumlah_perempuan }}</span>
+                            <span class="counter-value" data-toggle="counter-up">{{ $penduduk->jumlah_perempuan ?? '0'}}</span>
                         </div>
                     </div>
                 </div>
@@ -68,7 +68,7 @@
                     <div class="counter-content">
                         <h3>Kepala Keluarga</h3>
                         <div class="d-flex align-items-center justify-content-center">
-                            <span class="counter-value" data-toggle="counter-up">{{ $penduduk->jumlah_kk }}</span>
+                            <span class="counter-value" data-toggle="counter-up">{{ $penduduk->jumlah_kk ?? '0' }}</span>
                         </div>
                     </div>
                 </div>

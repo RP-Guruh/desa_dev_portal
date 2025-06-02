@@ -9,6 +9,9 @@ Route::resource('/produk', App\Http\Controllers\ProdukController::class);
 Route::resource('/infografis/penduduk', App\Http\Controllers\InfoPendudukController::class);
 Route::get('/infografis/penduduk/data/kelamin/{tahun}', [App\Http\Controllers\InfoPendudukController::class, 'dataByTahunJenisKelamin']);
 Route::get('/infografis/penduduk/data/usia/{tahun}', [App\Http\Controllers\InfoPendudukController::class, 'dataByTahunUsia']);
+Route::get('/infografis/penduduk/data/pendidikan/{tahun}', [App\Http\Controllers\InfoPendudukController::class, 'dataByTahunPendidikan']);
+Route::get('/infografis/penduduk/data/agama/{tahun}', [App\Http\Controllers\InfoPendudukController::class, 'dataByTahunAgama']);
+Route::get('/infografis/penduduk/data/perkawinan/{tahun}', [App\Http\Controllers\InfoPendudukController::class, 'dataByTahunPerkawinan']);
 
 
 
