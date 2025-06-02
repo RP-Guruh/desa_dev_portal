@@ -41,9 +41,9 @@
       <div class="chart-placeholder" id="chartperkawinan">Grafik Perkawinan (2025)</div>
     </section>
 
-    <section class="infografis-section" id="pekerjaan">
-      <h2>Jenis Pekerjaan</h2>
-      <div class="chart-placeholder">Grafik Pekerjaan (2025)</div>
+    <section class="infografis-section" id="agama">
+      <h2>Distribusi Penduduk Menurut Jenis Pekerjaan</h2>
+      <div class="chart-placeholder" id="chartpekerjaan">Grafik Pekerjaan (2025)</div>
     </section>
   </div>
 

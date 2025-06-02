@@ -40,7 +40,6 @@ enum PekerjaanEnum: string
     case PROMOTOR_ACARA = 'Promotor Acara';
     case PENGUSAHA_KECIL_MENENGAH_DAN_BESAR = 'Pengusaha Kecil, Menengah dan Besar';
     case JASA_PENGOBATAN_ALTERNATIF = 'Jasa Pengobatan Alternatif';
-    case PENELITI = 'Peneliti';
     case WARTAWAN = 'Wartawan';
     case JASA_PENYEWAAN_PERALATAN_PESTA = 'Jasa Penyewaan Peralatan Pesta';
     case KONSULTAN_MANAJEMEN_DAN_TEKNIS = 'Konsultan Manajemen dan Teknis';
@@ -87,7 +86,6 @@ enum PekerjaanEnum: string
     case SENIMAN = 'Seniman';
     case PEMILIK_USAHA_JASA_HIBURAN_DAN_PARIWISATA = 'Pemilik Usaha Jasa Hiburan dan Pariwisata';
     case PEMILIK_USAHA_JASA_TRANSPORTASI_DAN_PERHUBUNGAN = 'Pemilik Usaha Jasa Transportasi dan Perhubungan';
-    case PENELITI_LAGI = 'Peneliti';
     case PENATA_RAMBUT = 'Penata Rambut';
     case IMAM_MASJID = 'Imam Masjid';
     case TUKANG_KAYU = 'Tukang Kayu';
@@ -161,5 +159,17 @@ enum PekerjaanEnum: string
         }
         return null;
     }
+
+    public static function dariNama(string $name): ?self
+    {
+        foreach (self::cases() as $case) {
+            if ($case->name === $name) {
+                return $case;
+            }
+        }
+        return null;
+    }
+    
+
 }
 

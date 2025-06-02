@@ -5,7 +5,7 @@
     right: 20px;
     background-color: #1a7a45;
     border-radius: 15px;
-    padding: 8px 0;
+    padding: 10px 0;
     z-index: 1030;
     font-family: 'Poppins', sans-serif;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
@@ -37,11 +37,11 @@
   
   .mobile-bottom-nav .nav-item {
     flex: 0 0 auto;
-    width: 70px;
+    width: 80px;
     text-align: center;
     color: white;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 11px;
     padding: 0 5px;
     user-select: none;
     position: relative;
@@ -398,12 +398,41 @@
     max-height: 45px;
 }
 
-.navbar .dropdown-toggle::after {
-    border: none;
-    content: "\f107";
-    font-family: "Font Awesome 5 Free";
+.dropdown .dropdown-menu a:hover::after {
+    content: "";
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 4px;
+    background: #fff176;
+    border-radius: 50%;
+}
+
+.dropdown .dropdown-menu a.active {
+    background-color: #ffffff !important;
+    color: #1a7a45 !important;
     font-weight: 600;
-    vertical-align: middle;
+    position: relative;
+    padding-left: 20px;
+}
+
+
+.dropdown .dropdown-menu a.active::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: #fff176;
+}
+
+.dropdown .dropdown-menu a {
+    position: relative;
+    transition: all 0.3s ease;
+    padding: 8px 15px;
 }
 
 @media (min-width: 1200px) {
@@ -417,18 +446,20 @@
         border-radius: 10px;
         transition: .5s;
         opacity: 0;
+        background-color: #1a7a45 !important;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
     }
 }
 
 .dropdown .dropdown-menu a:hover {
-    background: var(--bs-primary);
-    color: var(--bs-secondary);
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: #fff176 !important;
+    padding-left: 20px;
 }
 
 .navbar .nav-item:hover .dropdown-menu {
     transform: rotateX(0deg);
     visibility: visible;
-    background: var(--bs-light) !important;
     transition: .5s;
     opacity: 1;
 }

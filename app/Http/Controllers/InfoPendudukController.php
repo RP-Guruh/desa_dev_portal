@@ -15,6 +15,8 @@ use App\Enums\PendidikanEnum;
 use App\Enums\AgamaEnum;
 use App\Enums\PernikahanEnum;
 use App\Models\StatistikAgamaPenduduk;
+use App\Models\StatistikPekerjaanPenduduk;
+use App\Enums\PekerjaanEnum;
 
 class InfoPendudukController extends Controller
 {
@@ -192,9 +194,28 @@ class InfoPendudukController extends Controller
         ]);
     } 
 
-    public function dataByTahunPekrjaan($tahun)
+    public function dataByTahunPekerjaan($tahun)
     {
-        // Implementasi logika untuk mendapatkan data berdasarkan tahun
-        // ...
+        $data = StatistikPekerjaanPenduduk::where('tahun', $tahun)->get();
+        $dataPoints = [];
+    
+        foreach ($data as $row) {
+           
+            $enum = PekerjaanEnum::dariNama($row->pekerjaan);
+
+            
+            if ($enum) {
+                $dataPoints[] = [
+                    'label' => $enum->value, // gunakan value untuk label tampilannya
+                    'y' => $row->jumlah
+                ];
+            }
+        }
+    
+        return response()->json([
+            'tahun' => $tahun,
+            'dataPoints' => $dataPoints
+        ]);
     }
+    
 }

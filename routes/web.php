@@ -12,6 +12,7 @@ Route::get('/infografis/penduduk/data/usia/{tahun}', [App\Http\Controllers\InfoP
 Route::get('/infografis/penduduk/data/pendidikan/{tahun}', [App\Http\Controllers\InfoPendudukController::class, 'dataByTahunPendidikan']);
 Route::get('/infografis/penduduk/data/agama/{tahun}', [App\Http\Controllers\InfoPendudukController::class, 'dataByTahunAgama']);
 Route::get('/infografis/penduduk/data/perkawinan/{tahun}', [App\Http\Controllers\InfoPendudukController::class, 'dataByTahunPerkawinan']);
+Route::get('/infografis/penduduk/data/pekerjaan/{tahun}', [App\Http\Controllers\InfoPendudukController::class, 'dataByTahunPekerjaan']);
 
 
 
