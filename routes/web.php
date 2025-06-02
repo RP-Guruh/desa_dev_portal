@@ -13,6 +13,6 @@ Route::get('/infografis/penduduk/data/pendidikan/{tahun}', [App\Http\Controllers
 Route::get('/infografis/penduduk/data/agama/{tahun}', [App\Http\Controllers\InfoPendudukController::class, 'dataByTahunAgama']);
 Route::get('/infografis/penduduk/data/perkawinan/{tahun}', [App\Http\Controllers\InfoPendudukController::class, 'dataByTahunPerkawinan']);
 Route::get('/infografis/penduduk/data/pekerjaan/{tahun}', [App\Http\Controllers\InfoPendudukController::class, 'dataByTahunPekerjaan']);
-
+Route::resource('/peta', App\Http\Controllers\PetaController::class);
 
 

@@ -4,10 +4,13 @@
 
 <section class="profil-section py-5 bg-light">
   <div class="container">
+
     <div class="text-center mb-5">
-      <h2 class="fw-bold text-dark">Berita Desa</h2>
+      <div class="title" style="font-size: 2.5rem; font-weight: 700; color: #1a7a45;">
+        Berita Desa Nusantara
+      </div>
       <p class="text-muted">
-        Dapatkan informasi terkini seputar kegiatan, pengumuman, dan perkembangan terbaru di Desa Nusantara.
+      Dapatkan informasi terkini seputar kegiatan, pengumuman, dan perkembangan terbaru di Desa Nusantara.
       </p>
     </div>
 
