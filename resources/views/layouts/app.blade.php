@@ -2,11 +2,14 @@
 <html lang="en">
 
     <head>
+
         <meta charset="utf-8">
         <title>Website Resmi Desa Nusantara</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="" name="keywords">
         <meta content="" name="description">
+        <link rel="icon" type="image/x-icon" href="{{ asset('img/logo_langkat.ico') }}">
+        <meta charset="utf-8">
 
         <!-- Google Web Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
