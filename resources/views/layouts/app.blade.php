@@ -1,32 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Website Resmi Desa Nusantara - Informasi Resmi dan Terpercaya</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <head>
+    <!-- SEO Meta Tags -->
+    <meta name="keywords" content="Desa Nusantara, Pemerintahan Desa, Informasi Desa, Profil Desa, Berita Desa, Pelayanan Publik">
+    <meta name="description" content="Website resmi Desa Nusantara yang menyajikan informasi terkini seputar pemerintahan desa, profil desa, layanan masyarakat, berita desa, dan statistik penduduk.">
+    <meta name="author" content="Desa Nusantara">
+    <link rel="canonical" href="https://www.desa.susut.ink/"> <!-- Ganti dengan URL kamu -->
 
-        <meta charset="utf-8">
-        <title>Website Resmi Desa Nusantara</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="" name="keywords">
-        <meta content="" name="description">
-        <link rel="icon" type="image/x-icon" href="{{ asset('img/logo_langkat.ico') }}">
-        <meta charset="utf-8">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Website Resmi Desa Nusantara - Informasi Resmi dan Terpercaya">
+    <meta property="og:description" content="Dapatkan informasi resmi dan terpercaya seputar Desa Nusantara, termasuk berita, layanan publik, dan data statistik penduduk.">
+    <meta property="og:image" content="{{ asset('img/og-image.png') }}"> <!-- Tambahkan gambar jika ada -->
+    <meta property="og:url" content="https://www.desa.susut.ink/">
+    <meta property="og:type" content="website">
 
-        <!-- Google Web Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-        
-        <!-- Icon Font Stylesheet -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Website Resmi Desa Nusantara - Informasi Resmi dan Terpercaya">
+    <meta name="twitter:description" content="Informasi terkini dari Desa Nusantara mengenai layanan publik, profil desa, berita desa, dan data statistik.">
+    <meta name="twitter:image" content="{{ asset('img/og-image.png') }}"> <!-- Sesuaikan -->
 
-        <!-- Libraries Stylesheet -->
-        <link href="{{ asset('js/animate/animate.min.css') }}?v={{ filemtime(public_path('js/animate/animate.min.css')) }}" rel="stylesheet">
-        <link href="{{ asset('js/owlcarousel/assets/owl.carousel.min.css') }}?v={{ filemtime(public_path('js/owlcarousel/assets/owl.carousel.min.css')) }}" rel="stylesheet">
-        <link href="{{ asset('css/bootstrap.min.css') }}?v={{ filemtime(public_path('css/bootstrap.min.css')) }}" rel="stylesheet">
-        <link href="{{ asset('css/style.css') }}?v={{ filemtime(public_path('css/style.css')) }}" rel="stylesheet">
-        <link href="{{ asset('css/style_infografis.css') }}?v={{ filemtime(public_path('css/style_infografis.css')) }}" rel="stylesheet">
-    </head>
+    <link rel="icon" type="image/x-icon" href="{{ asset('img/logo_langkat.ico') }}">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Fonts -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheets -->
+    <link href="{{ asset('js/animate/animate.min.css') }}?v={{ filemtime(public_path('js/animate/animate.min.css')) }}" rel="stylesheet">
+    <link href="{{ asset('js/owlcarousel/assets/owl.carousel.min.css') }}?v={{ filemtime(public_path('js/owlcarousel/assets/owl.carousel.min.css')) }}" rel="stylesheet">
+
+    <!-- Main Stylesheets -->
+    <link href="{{ asset('css/bootstrap.min.css') }}?v={{ filemtime(public_path('css/bootstrap.min.css')) }}" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}?v={{ filemtime(public_path('css/style.css')) }}" rel="stylesheet">
+    <link href="{{ asset('css/style_infografis.css') }}?v={{ filemtime(public_path('css/style_infografis.css')) }}" rel="stylesheet">
+</head>
+
 
     <body>
         
