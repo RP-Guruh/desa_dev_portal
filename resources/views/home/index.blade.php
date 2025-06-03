@@ -16,7 +16,7 @@
                 <h5 class="sub-title pe-3">Sambutan Kepala Desa</h5>
                 <h1 class="display-5 mb-4">Terus Melaju Untuk Indonesia Maju</h1>
                 <p class="mb-4">
-                    {!! $tentangDesa->kata_sambutan !!}
+                    {!! $tentangDesa->kata_sambutan ?? '' !!}
                 </p>
             </div>
         </div>
