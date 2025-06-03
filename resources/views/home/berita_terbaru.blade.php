@@ -27,7 +27,7 @@
                                         <p class="mb-3">
                                             @if (Str::length($cleanText) > 50)
                                             {{ Str::limit($cleanText, 50) }}
-                                            <a href="#">Read more</a>
+                                            <a href="{{ url('/berita/'.$data->id) }}">Read more</a>
                                             @else
                                             {{ $cleanText }}
                                             @endif
