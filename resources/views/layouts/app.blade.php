@@ -9,12 +9,12 @@
     <meta name="keywords" content="Desa Nusantara, Pemerintahan Desa, Informasi Desa, Profil Desa, Berita Desa, Pelayanan Publik">
     <meta name="description" content="Website resmi Desa Nusantara yang menyajikan informasi terkini seputar pemerintahan desa, profil desa, layanan masyarakat, berita desa, dan statistik penduduk.">
     <meta name="author" content="Desa Nusantara">
-    <link rel="canonical" href="https://www.desa.susut.ink/"> <!-- Ganti dengan URL kamu -->
+    <link rel="canonical" href="https://www.desa.susut.ink/"> 
 
     <!-- Open Graph / Facebook -->
     <meta property="og:title" content="Website Resmi Desa Nusantara - Informasi Resmi dan Terpercaya">
     <meta property="og:description" content="Dapatkan informasi resmi dan terpercaya seputar Desa Nusantara, termasuk berita, layanan publik, dan data statistik penduduk.">
-    <meta property="og:image" content="{{ asset('img/og-image.png') }}"> <!-- Tambahkan gambar jika ada -->
+    <meta property="og:image" content="{{ asset('img/logo_kablangkat.png') }}"> 
     <meta property="og:url" content="https://www.desa.susut.ink/">
     <meta property="og:type" content="website">
 
