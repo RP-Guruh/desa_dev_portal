@@ -83,8 +83,6 @@ const charts = {
             },
             toolTip: {
               shared: true,
-              
-
             },
             data: [
               {
@@ -358,7 +356,7 @@ const charts = {
             fontWeight: "bold"
           },
           axisX: {
-            title: "Status Perkawinan",
+            title: "Jenis Pekerjaan",
             labelFontSize: 12,
             labelFontFamily: "poppins",
             labelFontWeight: "bold",

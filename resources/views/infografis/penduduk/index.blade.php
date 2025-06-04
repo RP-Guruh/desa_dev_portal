@@ -36,12 +36,12 @@
       <div class="chart-placeholder" id="chartagama">Grafik Agama (2025)</div>
     </section>
 
-    <section class="infografis-section" id="agama">
+    <section class="infografis-section" id="perkawinan">
       <h2>Distribusi Penduduk Menurut Status Perkawinan</h2>
       <div class="chart-placeholder" id="chartperkawinan">Grafik Perkawinan (2025)</div>
     </section>
 
-    <section class="infografis-section" id="agama">
+    <section class="infografis-section" id="pekerjaan">
       <h2>Distribusi Penduduk Menurut Jenis Pekerjaan</h2>
       <div class="chart-placeholder" id="chartpekerjaan">Grafik Pekerjaan (2025)</div>
     </section>
